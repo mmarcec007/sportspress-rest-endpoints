@@ -1,9 +1,9 @@
 <?php
 
 /*
-Plugin Name: Sportspress Rest Endpoints
+Plugin Name: Sportspress REST Endpoints
 Plugin URI: http://URI_Of_Page_Describing_Plugin_and_Updates
-Description: A brief description of the Plugin.
+Description: This plugin exposes the data of your existing Sportspress via REST endpoints.
 Version: 0.0.1
 Author: mmarcec007
 Author URI: http://URI_Of_The_Plugin_Author
