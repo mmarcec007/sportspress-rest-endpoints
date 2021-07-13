@@ -88,6 +88,16 @@ class EventsController extends WP_REST_Controller
                 if ($queryParams['paged']) {
                     $args['paged'] = $queryParams['paged'];
                 }
+                if ($queryParams['team_slug']) {
+                    $sp_team_id = wp_get_post_by_slug($queryParams['team_slug'], 'sp_team')->ID;
+                    $args['meta_query'] = array(
+                        array(
+                            'key' => 'sp_team',
+                            'value' => $sp_team_id,
+                            'compare' => 'IN'
+                        )
+                    );
+                }
             }
         }
 
