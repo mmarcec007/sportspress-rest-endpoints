@@ -68,7 +68,11 @@ class EventsController extends WP_REST_Controller
         $args = array();
         $data = [];
         if ($id !== null) {
-            $args['name'] = $id;
+            if (is_numeric($id)) {
+                $args['post__in'] = [$id];
+            } else {
+                $args['name'] = $id;
+            }
             $args['post_status'] = array('publish', 'future');
         } else {
             if (!empty($queryParams)) {
