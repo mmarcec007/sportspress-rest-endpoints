@@ -144,7 +144,7 @@ class EventsController extends WP_REST_Controller
                     $sp_event['away_team'] = [
                         "id" => $sp_event_teams[1],
                         "name" => sp_get_team_name($sp_event_teams[1]),
-                        "logo" => sp_get_logo_url($sp_event_teams[0])
+                        "logo" => sp_get_logo_url($sp_event_teams[1])
                     ];
                 }
             }
