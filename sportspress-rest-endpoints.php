@@ -23,3 +23,9 @@ add_action( 'rest_api_init', function () {
     $controller = new EventsController();
     $controller->register_routes();
 } );
+
+add_action( 'rest_api_init', function () {
+    require plugin_dir_path( __FILE__ ) . 'includes/controllers/LeagueTableController.php';
+    $controller = new LeagueTableController();
+    $controller->register_routes();
+} );
