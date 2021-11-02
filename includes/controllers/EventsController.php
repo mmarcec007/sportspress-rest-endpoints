@@ -173,6 +173,7 @@ class EventsController extends WP_REST_Controller
                     $sp_event['featured_image'] = wp_get_attachment_thumb_url($_thumbnail_id);
                 }
 
+                $sp_event['event_performance'] = sp_get_performance($sp_post->ID);
                 $sp_event['content'] = $sp_post->post_content;
                 $sp_event['excerpt'] = $sp_post->post_excerpt;
                 $sp_event['time_line'] = get_post_meta($sp_post->ID, 'sp_timeline', true);
