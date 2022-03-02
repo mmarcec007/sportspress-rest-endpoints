@@ -102,6 +102,15 @@ class EventsController extends WP_REST_Controller
                         )
                     );
                 }
+                if ($queryParams['season_slug']) {
+                    $args['tax_query'] = array(
+                        array(
+                            'taxonomy' => 'sp_season',
+                            'field' => 'slug',
+                            'terms' => $queryParams['season_slug']
+                        )
+                    );
+                }
             }
         }
 
