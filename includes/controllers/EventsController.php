@@ -135,6 +135,7 @@ class EventsController extends WP_REST_Controller
                 "timestamp" => get_post_timestamp($sp_post->ID),
                 "sp_event_status" => $sp_event_status,
                 "format" => $sp_format,
+                "status" => get_post_status($sp_post->ID)
             ];
 
             if (!empty($sp_event_leagues)) {
