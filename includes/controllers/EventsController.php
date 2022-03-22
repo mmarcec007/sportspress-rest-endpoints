@@ -132,6 +132,7 @@ class EventsController extends WP_REST_Controller
                 "match_day" => $sp_day,
                 "date" => sp_get_date($sp_post->ID),
                 "time" => $sp_status === 'ok' ? sp_get_time($sp_post->ID) : $sp_status,
+                "timestamp" => get_post_timestamp($sp_post->ID),
                 "sp_event_status" => $sp_event_status,
                 "format" => $sp_format,
             ];
