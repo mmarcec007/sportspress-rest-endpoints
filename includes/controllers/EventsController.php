@@ -187,6 +187,7 @@ class EventsController extends WP_REST_Controller
                 $sp_event['excerpt'] = $sp_post->post_excerpt;
                 $sp_event['time_line'] = get_post_meta($sp_post->ID, 'sp_timeline', true);
                 $sp_event['video'] = get_post_meta($sp_post->ID, 'sp_video', true);
+                $sp_event['specs'] = get_post_meta($sp_post->ID, 'sp_specs', true);
             }
 
             array_push($data, $sp_event);
