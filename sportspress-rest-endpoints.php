@@ -29,3 +29,9 @@ add_action( 'rest_api_init', function () {
     $controller = new LeagueTableController();
     $controller->register_routes();
 } );
+
+add_action( 'rest_api_init', function () {
+    require plugin_dir_path( __FILE__ ) . 'includes/controllers/TeamsController.php';
+    $controller = new TeamsController();
+    $controller->register_routes();
+} );
